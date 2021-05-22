@@ -7,20 +7,27 @@
 
 import Foundation
 
-class Task {
+class Task: Codable {
     
-    let name: String
-    let notes: String?
-    let dueDate: Date?
+    var name: String
+    var notes: String?
+    var dueDate: Date?
     var isComplete: Bool
+    let uuid: String
     
-    init(name: String, notes: String?, dueDate: Date?, isComplete: Bool) {
+    init(name: String, notes: String?, dueDate: Date?, isComplete: Bool = false, uuid: String = UUID().uuidString) {
         
         self.name = name
         self.notes = notes
         self.dueDate = dueDate
         self.isComplete = isComplete
-        
+        self.uuid = uuid
         
     }
 }// End of class
+
+extension Task: Equatable {
+    static func == (lhs: Task, rhs: Task) -> Bool {
+        return lhs.uuid == rhs.uuid
+    }
+}

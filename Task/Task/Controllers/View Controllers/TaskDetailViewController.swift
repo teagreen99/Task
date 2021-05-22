@@ -22,7 +22,10 @@ class TaskDetailViewController: UIViewController {
     @IBAction func dueDatePickerChanged(_ sender: Any) {
     }
     
+    // MARK: - Properties
+    var task: Task?
     
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
