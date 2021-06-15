@@ -1,8 +1,8 @@
 //
 //  Task.swift
-//  Task
+//  TaskProject
 //
-//  Created by Tim Green on 4/21/21.
+//  Created by Tim Green on 6/13/21.
 //
 
 import Foundation
@@ -13,21 +13,19 @@ class Task: Codable {
     var notes: String?
     var dueDate: Date?
     var isComplete: Bool
-    let uuid: String
     
-    init(name: String, notes: String?, dueDate: Date?, isComplete: Bool = false, uuid: String = UUID().uuidString) {
-        
+    init(name: String, notes: String?, dueDate: Date = Date(), isComplete: Bool = false) {
         self.name = name
         self.notes = notes
         self.dueDate = dueDate
         self.isComplete = isComplete
-        self.uuid = uuid
         
+        return
     }
-}// End of class
+}
 
 extension Task: Equatable {
     static func == (lhs: Task, rhs: Task) -> Bool {
-        return lhs.uuid == rhs.uuid
+        return lhs.name == rhs.name && lhs.notes == rhs.notes && lhs.dueDate == rhs.dueDate && lhs.isComplete == rhs.isComplete
     }
 }
