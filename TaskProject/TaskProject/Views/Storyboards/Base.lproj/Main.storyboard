@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Task List Table View Controller-->
+        <!--TASK LIST-->
         <scene sceneID="i0O-bN-eYa">
             <objects>
                 <tableViewController id="rPp-qM-DfF" customClass="TaskListTableViewController" customModule="TaskProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -69,7 +69,7 @@
                             <outlet property="delegate" destination="rPp-qM-DfF" id="HTC-Hz-deT"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Xhu-LE-P69">
+                    <navigationItem key="navigationItem" title="TASK LIST" id="Xhu-LE-P69">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="k2m-Np-I7V">
                             <connections>
                                 <segue destination="M9O-oD-QxB" kind="show" identifier="" id="Glh-w0-tl1"/>
@@ -99,7 +99,7 @@
             </objects>
             <point key="canvasLocation" x="-91.304347826086968" y="49.553571428571423"/>
         </scene>
-        <!--Task Detail View Controller-->
+        <!--TASK DETAILS-->
         <scene sceneID="6Cx-Ii-2uP">
             <objects>
                 <viewController id="M9O-oD-QxB" customClass="TaskDetailViewController" customModule="TaskProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -146,7 +146,7 @@
                             <constraint firstItem="Zcs-Bc-U4y" firstAttribute="bottom" secondItem="VS7-Kz-ck9" secondAttribute="bottom" constant="-12.5" id="w83-Nq-gu9"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="OG7-Vj-7Ia">
+                    <navigationItem key="navigationItem" title="TASK DETAILS" id="OG7-Vj-7Ia">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="T82-h9-3jc">
                             <connections>
                                 <action selector="saveButtonTapped:" destination="M9O-oD-QxB" id="CGh-u3-wQ6"/>
